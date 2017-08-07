@@ -4,22 +4,27 @@
 
 `docker-compose build`
 
-2. migrate db schema:
+2. start up db:
+
+`docker-compose run db`
+
+3. migrate db schema:
 
 `docker-compose run django hearstbook/manage.py migrate`
 
-3. make a super user:
+4. make a super user:
+
 `docker-compose run django hearstbook/manage.py createsuperuser`
 
-4. run the server:
+5. run the server:
 
 `docker-compose up`
 
-4. login and make some books
+6. login and make some books
 
 http://127.0.0.1:8000/admin/
 
-5. kill the server:
+7. kill the server:
 
 `docker-compose down`
 
