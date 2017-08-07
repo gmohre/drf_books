@@ -14,3 +14,10 @@ class LibraryViewSet(viewsets.ModelViewSet):
     queryset = Library.objects.all()
     serializer_class = LibrarySerializer
     filter_fields = ('name', 'books')
+    
+    def get_queryset(self):
+        qs = Library.objects.all()
+        book = eval(self.request.query_params.get('book', None))
+        if book:
+            qs = qs.filter(books__in=[book])
+        return qs
