@@ -1,13 +1,14 @@
-### Books
+### Books Demo Docker Instructions ###
+
 1. set up the container:
 `docker-compose build`
 
 2. migrate db schema:
 
-`docker-compose run django python3 hearstbook/manage.py migrate`
+`docker-compose run django hearstbook/manage.py migrate`
 
 3. make a super user:
-`docker-compose run django python3 hearstbook/manage.py createsuperuser`
+`docker-compose run django hearstbook/manage.py createsuperuser`
 
 4. run the server:
 
