@@ -21,6 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 ALLOWED_HOSTS = []
+DEBUG = True
 
 
 # Application definition
@@ -34,7 +35,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'django_extensions',
-    'hearstbook.library'
+    'hearstbook.library',
+    'djmoney'
 ]
 
 MIDDLEWARE = [

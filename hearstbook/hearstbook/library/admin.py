@@ -1,8 +1,6 @@
 from django.contrib import admin
 from .models import Book
 class BookAdmin(admin.ModelAdmin):
-    list_display = ('id', 'author', 'title', 'isbn', 'cost', 'description')
-    def cost(self, obj):
-        return '$%.2f' % obj.price
+    list_display = ('id', 'author', 'title', 'isbn', 'price', 'description')
 
 admin.site.register( Book, BookAdmin)
