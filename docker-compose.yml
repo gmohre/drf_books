@@ -14,3 +14,6 @@ services:
   migrate:
     build: .
     command: python3 hearstbook/manage.py migrate
+  createsuper:
+    build: .
+    command: python3 hearstbook/manage.py createsuperuser
