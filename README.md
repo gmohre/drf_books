@@ -1,17 +1,14 @@
 ### Books
-To setup:
-
-`docker-compose run django python3 hearstbook/manage.py migrate`
-
-To migrate db schema:
-
-`docker-compose run django python3 hearstbook/manage.py migrate`
-
-To run the server:
+1. run the server:
 
 `docker-compose up`
 
-To kill the server:
+2. migrate db schema:
+
+`docker-compose run django python3 hearstbook/manage.py migrate`
+
+
+3. kill the server:
 
 `docker-compose down`
 
