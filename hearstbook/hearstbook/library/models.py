@@ -11,11 +11,16 @@ class Book(models.Model):
 
     def __repr__(self):
         return "{0} by {1}".format(self.title, self.author)
+    
+    def __str__(self):
+        return "{0} by {1}".format(self.title, self.author)
 
-
-class BookCategory(models.Model):
+class Library(models.Model):
     name = models.CharField(max_length=2**8)
     books = models.ManyToManyField(Book)
 
     def __repr__(self):
         return self.name
+
+    class Meta:
+         verbose_name_plural = "Libraries"
