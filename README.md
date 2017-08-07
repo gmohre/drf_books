@@ -1,23 +1,28 @@
 ### Books
-To setup:
+1. set up the container:
+`docker-compose build`
+
+2. migrate db schema:
 
 `docker-compose run django python3 hearstbook/manage.py migrate`
 
-To migrate db schema:
+3. make a super user:
+`docker-compose run django python3 hearstbook/manage.py createsuperuser`
 
-`docker-compose run django python3 hearstbook/manage.py migrate`
-
-To run the server:
+4. run the server:
 
 `docker-compose up`
 
-To kill the server:
+4. login and make some books
+http://127.0.0.1:8000/admin/
+
+5. kill the server:
 
 `docker-compose down`
 
 To run the tests:
 
-`docker-compose run django python3 hearstbook/manage.py test hearstbook`
+`docker-compose run django python3 hearstbook/manage.py test hearstbook.library`
 
 The one ambiguity in the problem was there was no clear definition of a category. To implement a true category, I would add a m2m on Book to a BookCategory.
 
