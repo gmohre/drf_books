@@ -8,9 +8,9 @@
 
 `docker-compose run db`
 
-3. start up django:
+3. start up the application:
 
-`docker-compose run django`
+`docker-compose up`
 
 4. migrate db schema:
 
