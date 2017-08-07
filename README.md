@@ -10,7 +10,7 @@
 
 3. migrate db schema:
 
-`docker-compose run migrate
+`docker-compose run migrate`
 
 4. make a super user:
 
